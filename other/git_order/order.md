@@ -1,5 +1,6 @@
 ## git
 
+### 分支相关
 ##### 1. 新建分支
 ```
 git checkout -b branch-name
@@ -15,4 +16,15 @@ git branch -d branch-name
 ##### 3. 在分支上提交内容
 ```
 git push origin yolk
+```
+
+##### 4. 切换到分支
+```
+git checkout branch-name
+```
+
+##### 5. 从远程分支上面下载内容
+```
+git pull 远程分支名字 origin/本地分支名字
+git pull testAnswer origin/testAnswer
 ```
