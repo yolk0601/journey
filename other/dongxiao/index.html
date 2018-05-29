@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    @media screen and (max–width:600px){
+      .dandelion{display: none !important;}
+    }
+    .dandelion .smalldan {
+      width: 36px;
+      height: 60px;
+      right: 108px; /*这边是小蒲公英显示的地方。居左：left；局右：right。自行修改。后面的参数是距边界的距离。*/
+      background-position:  0 -90px;
+      /*border: 0 solid red;*/
+    }
+    .dandelion span {
+    –webkit–animation: ball–x 3s linear 2s infinite;
+       –moz–animation: ball–x 3s linear 2s infinite;
+            animation: ball–x 3s linear 2s infinite;
+    –webkit–transform–origin: bottom center;
+       –moz–transform–origin: bottom center;
+            transform–origin: bottom center;
+    }
+    .dandelion span {
+      display: block;
+      position: fixed;
+      z-index: 99999;
+      bottom: 0px;
+      background:url('http://7vijc7.com1.z0.glb.clouddn.com/wp-content/uploads/2015/07/2015071806445693.png') no-repeat;
+    }
+    .dandelion .bigdan {
+      width: 64px;
+      height: 115px;
+      right: 61px;/*这边是大蒲公英的样式，同上。*/
+      background-position: -86px -36px;
+      /*border: 0 solid red;*/
+    }
+    @keyframes ball–x {
+      0% { transform:rotate(0deg);}
+      25% { transform:rotate(5deg); }
+      50% { transform:rotate(0deg);}
+      75% { transform:rotate(-5deg);}
+      100% { transform:rotate(0deg);} /*我见过几个这边多设置了一个停顿点，会导致蒲公英摇摆时卡顿。调整成这样就可以了。以下同。*/
+    }
+    @-webkit–keyframes ball–x {
+      0% { –webkit–transform:rotate(0deg);}
+      25% { –webkit–transform:rotate(5deg); }
+      50% { –webkit–transform:rotate(0deg);}
+      75% { –webkit–transform:rotate(-5deg);}
+      100% { –webkit–transform:rotate(0deg);}
+    }
+    @-moz–keyframes ball–x {
+      0% { –moz–transform:rotate(0deg);}
+      25% { –moz–transform:rotate(5deg); }
+      50% { –moz–transform:rotate(0deg);}
+      75% { –moz–transform:rotate(-5deg);}
+      100% { –moz–transform:rotate(0deg);}
+    }
+</style>
+</head>
+<body>
+  <div class="footer">
+    <div class="dandelion">
+    <span class="smalldan"></span>
+    <span class="bigdan"></span>
+    </div>
+  </div>
+</body>
+</html>
+
