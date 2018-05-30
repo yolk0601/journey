@@ -30,3 +30,13 @@ git pull testAnswer origin/testAnswer
 ```
 
 ##### 6. 将仓库的某文件覆盖本地的某文件
+> 1. 将仓库中的文件覆盖本地文件，直接忽略本地文件修改
+> 
+>> 使用: git fetch ==> 
+>>  
+>>  git reset --hard origin/imac => 从远程imac分支上 将代码下载下来
+>>  
+>>  git pull => 合并到本地
+>>  
+> 
+> 2. 覆盖一个文件 ？
