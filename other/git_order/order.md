@@ -28,3 +28,5 @@ git checkout branch-name
 git pull 远程分支名字 origin/本地分支名字
 git pull testAnswer origin/testAnswer
 ```
+
+##### 6. 将仓库的某文件覆盖本地的某文件
