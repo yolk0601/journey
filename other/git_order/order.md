@@ -40,3 +40,10 @@ git pull testAnswer origin/testAnswer
 >>  
 > 
 > 2. 覆盖一个文件 ？
+> 
+
+##### 7. git pull 远程非对应分支到本地分支
+```
+ex: 本地：imac； 远程:linux
+git pull origin linux:imac
+```
