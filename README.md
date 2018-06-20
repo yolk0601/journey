@@ -15,3 +15,9 @@
 |_ linux
 ```
 
+##### sublime快捷键
+1. https://blog.csdn.net/md1688/article/details/53043525
+2. https://blog.csdn.net/mycms5/article/details/70194045
+
+##### chrome 浏览器快捷键
+1. http://www.harbin-seo.com/by-talk/mac-chrome-shortcuts/

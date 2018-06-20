@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>我的页面</title>
+  <style>
+    /*//我是吸顶头部*/
+  /*.header{
+    width:100%;
+    height:50px;
+    position:fixed;
+    top:0px;
+    background-color: #000;
+  }*/
+  /*//我是中间要滑动的部分*/
+  .main{
+    width:100%;
+    height:5000px;
+    position:absolute;
+    padding-top:50px;/*top值为header的高*/
+    padding-bottom:50px;/*bottom值为footer的高*/
+    box-sizing:border-box;/*这里改变盒子模型为怪异盒模型，这样padding值不会增加main的高度*/
+    overflow-y:scroll;
+    background-color: #fff;
+  }
+  /*//我是吸底尾部*/
+  .footer{
+    width:100%;
+    height:50px;
+    position:fixed;
+    bottom:0px;
+    background-color: #aaa;
+  }
+  </style>
+</head>
+<body>
+ <!--  <div class="header">
+      <!--写点啥吧-->
+  </div> -->
+  <div class="main">
+      <!--写点啥吧-->
+  </div>
+  <div class="footer">
+      <!--写点啥吧-->
+  </div>
+</body>
+</html>
