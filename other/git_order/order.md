@@ -47,3 +47,25 @@ git pull testAnswer origin/testAnswer
 ex: 本地：imac； 远程:linux
 git pull origin linux:imac
 ```
+
+#### 8. 从一个git仓库迁移到另外一个git仓库
+```
+1). 从原地址克隆一份裸版本库，比如原本托管于 GitHub。
+git clone --bare git://github.com/username/project.git
+2). 然后到新的 Git 服务器上创建一个新项目，比如 GitCafe。
+3). 以镜像推送的方式上传代码到 GitCafe 服务器上。
+cd project.git
+git push --mirror git@gitcafe.com/username/newproject.git
+-- mirror 克隆出来的裸版本对上游版本库进行了注册，这样可以在裸版本库中使用git fetch命令和上游版本库进行持续同步。
+4). 删除本地代码
+cd ..
+rm -rf project.git
+5). 到新服务器 GitCafe 上找到 Clone 地址，直接 Clone 到本地就可以了。
+git clone git@gitcafe.com/username/newproject.git
+
+demo：现有git仓库是在coding上，name: aaa; 推送到 gitlab的仓库中，
+在现有仓库下。cd cangkuName
+执行命令：git push --mirror https://git.xesv5.com/xuejs/jiaoyan_platform.git
+// 能将所有的本仓库的分支以及master代码都合并过去
+// 前提条件: 不同的网址，都添加好ssh 密钥
+```
