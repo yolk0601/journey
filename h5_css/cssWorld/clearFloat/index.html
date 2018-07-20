@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>清除浮动</title>
+  <style>
+    div, p, h1, h2, h3, h4, h5, h6{
+      /*清除默认的 margin padding*/
+      padding:0;
+      margin:0;
+    }
+    div{
+      background-color: #409EFF;
+      -webkit-box-shadow: 0 0 2px 2px #409EFF;
+      box-shadow: 0 0 2px 2px #409EFF;
+      margin-bottom: 2px;
+      box-sizing: border-box;
+    }
+    img{
+      width:100px;
+    }
+    div.two{
+      /*解决两个内联元素在div中显示 留白的问题*/
+      font-size:0;
+    }
+    div.three{
+      border: 1px solid #333;
+    }
+    p{
+      /*同上 解决两个内联元素在div中显示 留白的问题*/
+      font-size: 0;
+      float: left;
+    }
+    /*清除*/
+    .clearfix:after{
+      content: '';
+      display: table; /*display: block table list-item都可以*/
+      /*list-item 可以解决浮动问题，增加了新的问题*/
+      clear:both;
+    }
+    .table{
+      display: inline-table;
+      width: 100px;
+    }
+    .table > div{
+      display: list-item;
+    }
+    .father{
+      width:150px;
+      background-color: #cd0000;
+      padding:2px;
+      white-space: nowrap;
+    }
+    .child{
+      display: inline-block;
+      background-color: #f0f3f9;
+    }
+  </style>
+</head>
+<body>
+  <!-- 1. 普通展示 -->
+  <h5>1. 普通展示</h5>
+  <div>
+    <img src="https://static.dingtalk.com/media/lADPACOG83HoTPbNAu7NAuw_748_750.jpg" alt="">
+    <img src="https://static.dingtalk.com/media/lADPACOG83HoTPbNAu7NAuw_748_750.jpg" alt="">
+  </div>
+  <!-- 2. 解决内联元素显示留白问题 -->
+  <h5>2. 解决内联元素显示留白问题</h5>
+  <div class="two">
+    <img src="https://static.dingtalk.com/media/lADPACOG83HoTPbNAu7NAuw_748_750.jpg" alt="">
+    <img src="https://static.dingtalk.com/media/lADPACOG83HoTPbNAu7NAuw_748_750.jpg" alt="">
+  </div>
+  <!-- 3. 清除浮动 运用伪类 -->
+  <h5>3. 清除浮动 运用伪类</h5>
+  <div class="three clearfix">
+    <p>
+      <img src="https://static.dingtalk.com/media/lADPACOG83HoTPbNAu7NAuw_748_750.jpg" alt="">
+    </p>
+    <p>
+      <img src="https://static.dingtalk.com/media/lADPACOG83HoTPbNAu7NAuw_748_750.jpg" alt="">
+    </p>
+  </div>
+  <!-- 4. 设置 display inline-table 能不能形成 外层是内联盒子，里层是table容器盒子。表现形式上：外层为一行，里面是一个表格 -->
+  <h5>4. 设置display inline-table</h5>
+  <div class="table">这里写内容</div>
+  <!-- 5. 出框-->
+  <h5>5. 出框</h5>
+  <div class="father">
+    <span class="child">恰似一江春水向东流，飞洒读后感覅是的疯狗萨的</span>
+  </div>
+</body>
+</html>
