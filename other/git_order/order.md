@@ -1,4 +1,5 @@
 ## git
+1. https://www.cnblogs.com/mengdd/p/3585038.html
 
 ### 分支相关
 ##### 1. 新建分支
@@ -48,7 +49,7 @@ ex: 本地：imac； 远程:linux
 git pull origin linux:imac
 ```
 
-#### 8. 从一个git仓库迁移到另外一个git仓库
+##### 8. 从一个git仓库迁移到另外一个git仓库
 ```
 1). 从原地址克隆一份裸版本库，比如原本托管于 GitHub。
 git clone --bare git://github.com/username/project.git
@@ -68,4 +69,10 @@ demo：现有git仓库是在coding上，name: aaa; 推送到 gitlab的仓库中�
 执行命令：git push --mirror https://git.xesv5.com/xuejs/jiaoyan_platform.git
 // 能将所有的本仓库的分支以及master代码都合并过去
 // 前提条件: 不同的网址，都添加好ssh 密钥
+```
+
+##### 9. git checkout 骚操作
+```
+git checkout  -p filePath 覆盖，会发出确认提示
+git checkout origin/fenzhiName  filePath  ==> 增量文件，这样添加，比较妥当。
 ```

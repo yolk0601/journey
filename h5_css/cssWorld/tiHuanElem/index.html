@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	<title>替换元素</title>
 	<style>
+		html,body{
+			background-color: #fff;
+		}
 		img.img{
 			width: 500px;
 			height: 500px;
@@ -21,23 +24,60 @@
 			width: 200px;
 			height: 200px;
 		}
-		img.after{
+		/* img 悬浮效果 */
+		img.after:not([src]) {
+			visibility: hidden;
+		}
+		img.after,
+		img.tihuan{
 			width: 200px;
 			height: 200px;
 			display: inline-block;
 			cursor: pointer;
+			color: transparent;
+			position: relative;
+			overflow: hidden;
 		}
-		img.after:after{
+		img.after::before,
+		img.tihuan::before{
+			content: "";
+	    position: absolute;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    background-color: #f0f3f9;
+	    visibility: visible;
+		}
+		img.after::after,
+		img.tihuan::after{
 			content:  attr(alt);
 			position: absolute;
+			left: 0;
 			bottom: 0;
 			width: 100%;
+			line-height: 30px;
+			color:  white;
+			font-size: 14px;
 			background-color: rgba(0,0,0,0.5);
 			transform: translateY(100%);
 			transition: transform 0.5s;
+			visibility: visible;
 		}
-		img.after:hover:after{
+		img.after:hover::after,
+		img.tihuan:hover::after{
 			transform: translateY(0);
+		}
+		/* 替换图片 */
+		img.tihuan:not([src]){
+			content: url('https://static.dingtalk.com/media/lADPACOG83HoTPbNAu7NAuw_748_750.jpg');
+		}
+		img.tihuan:hover{
+			content: url('http://img0.imgtn.bdimg.com/it/u=30199196,941130670&fm=27&gp=0.jpg');
+		}
+		.text{
+			width: 200px;
+			height: auto;
+			content:  url('https://static.dingtalk.com/media/lADPACOG83HoTPbNAu7NAuw_748_750.jpg');
 		}
 	</style>
 </head>
@@ -75,6 +115,14 @@
 	<!-- <div class="jieyong"></div> -->
 	<!-- 实现一下伪元素 生成图片底部条情况 -->
 	<h5>:after元素实现底部条</h5>
-	<img class="after" src="https://static.dingtalk.com/media/lADPACOG83HoTPbNAu7NAuw_748_750.jpg" alt="我的头像-蛋黄">
+	<p>没有图片效果</p>
+	<img class="after"  alt="我的头像-蛋黄">
+	<!-- 添加回来src 效果都没有了 -->
+	<p>替换图片效果</p>
+	<img class="tihuan" alt="我的头像-蛋黄">
+	<p>替换文字</p>
+	<p class="text">我的头像</p>
+
+	
 </body>
 </html>
