@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>替换元素</title>
+	<style>
+		img.img{
+			width: 500px;
+			height: 500px;
+		}
+		img.block{
+			display: block;
+		}
+		div.jieyong{
+			width: 200px;
+		}
+		div.jieyong:before{
+			content: url('https://static.dingtalk.com/media/lADPACOG83HoTPbNAu7NAuw_748_750.jpg');
+			background-size: 20%;
+			display: block;
+			width: 200px;
+			height: 200px;
+		}
+		img.after{
+			width: 200px;
+			height: 200px;
+			display: inline-block;
+			cursor: pointer;
+		}
+		img.after:after{
+			content:  attr(alt);
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			background-color: rgba(0,0,0,0.5);
+			transform: translateY(100%);
+			transition: transform 0.5s;
+		}
+		img.after:hover:after{
+			transform: translateY(0);
+		}
+	</style>
+</head>
+<body>
+	<!-- 区别 input button 两个按钮情况 -->
+	<h5>区分 input || button</h5>
+	<p>1. input white-space 默认值 pre 保留内容中的 空白字符； button white-space默认值 normal， 忽略空白</p>
+	<p>2. input 按钮不会自动换行， button 文字很多的时候会自动换行</p>
+	<input type="button" value="  按钮  ">
+	<button type="button">   按钮   </button>
+	<input type="button" value="按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮">
+	<button type="button">按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮按钮</button>
+	<!-- 替换元素尺寸计算 -->
+	<h5>替换元素尺寸计算</h5>
+	<h6>三大规则， 固定尺寸，html尺寸(dom属性)，css尺寸(样式)</h6>
+	<p>1. 没有写样式高宽，没有属性高宽，则直接适用 固定尺寸</p>
+	<p>2. 没有样式高宽</p>
+	<p>3. 最终由样式决定</p>
+	<img src="https://static.dingtalk.com/media/lADPACOG83HoTPbNAu7NAuw_748_750.jpg" alt="固定尺寸" title="固定尺寸">
+	<img src="https://static.dingtalk.com/media/lADPACOG83HoTPbNAu7NAuw_748_750.jpg" alt="html尺寸" title="html尺寸" width="300" height="300">
+	<img class="img" src="https://static.dingtalk.com/media/lADPACOG83HoTPbNAu7NAuw_748_750.jpg" alt="css尺寸" title="css尺寸" width="300" height="300">
+	<!-- 未设定情况的数据 -->
+	<h5>替换元素，没有替换内容，也没有尺寸设定出现的情况</h5>
+	<p>1. 可替换元素，canvas video iframe 默认大小是 300px*150px</p>
+	<div>
+		<!-- img 火狐 0*16 谷歌0*0 -->
+		<img>
+		<canvas></canvas>
+		<video></video>
+		<iframe frameborder="0"></iframe>
+	</div>
+	<!-- 宽高设置 不是修改 图片固有尺寸 -->
+	<!-- 借用非替换元素的 ：before :after -->
+	<h5>解释固有尺寸和宽高设置情况</h5>
+	<!-- <div class="jieyong"></div> -->
+	<!-- 实现一下伪元素 生成图片底部条情况 -->
+	<h5>:after元素实现底部条</h5>
+	<img class="after" src="https://static.dingtalk.com/media/lADPACOG83HoTPbNAu7NAuw_748_750.jpg" alt="我的头像-蛋黄">
+</body>
+</html>
