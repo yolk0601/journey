@@ -75,4 +75,19 @@ demo：现有git仓库是在coding上，name: aaa; 推送到 gitlab的仓库中�
 ```
 git checkout  -p filePath 覆盖，会发出确认提示
 git checkout origin/fenzhiName  filePath  ==> 增量文件，这样添加，比较妥当。
+git checkout -b fenzhiname // 新建分支并 切换到新分支上面
+```
+
+
+##### 10 git branch 骚操作
+```
+git branch fenzhiname // 新建分支 注意:在master上面 新建
+git branch // 查看本地分支
+git branch -a //查看远程分支 所有分支
+git branch -d fenzhiname // 删除本地分支
+```
+
+#### 11 git push 骚操作
+```
+git push origin :fenzhiname //删除远程的分支
 ```
