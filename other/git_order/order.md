@@ -1,6 +1,18 @@
 ## git
 1. https://www.cnblogs.com/mengdd/p/3585038.html
 
+### 设置
+##### 1. Git 命令操作时，总需要输入用户名和密码的解决方案
+```
+执行： 
+git config --global credential.helper store
+然后
+在当前库中执行：
+git push //随意命令
+// 之后需要输入密码和账号，输入完成；之后的操作不需要再输入用户名和密码了
+```
+
+
 ### 分支相关
 ##### 1. 新建分支
 ```

@@ -4,15 +4,16 @@
 这个地方用时间节点，
 按照时间来，慢慢写。写上技术点就好
 目录
-|_ vue
-|_ canvas
+|_ vue --> vue框架
+|_ canvas --> canvas学习
 |_ 其他框架
-|_ 原生javascript
-|_ h5 relative API
-|_ 业务小组件
-|_ 算法
-|_ blog
-|_ linux
+|_ javascript_proto --> 原生javascript
+|_ h5_css -->  h5 relative API css相关
+|_ module --> 业务小组件
+|_ algo ---> 算法
+|_ blog ---> 总结与他人博客学习
+|_ linux ---> linux知识
+|_ other --> 很多边边角角的东西
 ```
 
 ##### sublime快捷键

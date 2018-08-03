@@ -1,4 +1,5 @@
-### 需求
+
+### 操作
 
 ##### 1. 在sublime中启动该文件终端进行操作
 > 安装插件：terminal ==> shift+command+p => install package
@@ -27,3 +28,28 @@
 > 安装插件: shift + command + p =>install package => input:plug-in unit filename
 > 
 > 卸载插件: shift + command + p => remove package => input:plug-in unit filename
+
+##### 4. 使用的插件
+
+
+### 我所需要的插件
+##### 安装 package control
+
+> 可以访问网站： https://packagecontrol.io/installation
+> 
+> 以下是安装的sublime text 3 的内容 
+
+```
+
+import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+```
+
+```
+
+import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
+```
+
+##### 我所需要的插件和安装方式
++ emment (自动安装pyv8)
++ 
+
