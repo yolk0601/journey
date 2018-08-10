@@ -50,6 +50,7 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 ```
 
 ##### 我所需要的插件和安装方式
-+ emment (自动安装pyv8)
++ emmet (自动安装pyv8)
++ JsFormat
 + 
 

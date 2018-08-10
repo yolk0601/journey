@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>content属性</title>
+  <style>
+    /*一种形式*/
+    /*.ch>q:before{
+      content: '“';
+    }
+    .ch>q:after {
+      content: '”';
+    }
+    .en>q:before{
+      content: '"';
+    }
+    .en>q:after {
+      content: '"';
+    }
+    .no>q:before{
+      content: '《';
+    }
+    .no>q:after {
+      content: '》';
+    }*/
+    /*另一种实现形式*/
+    .ch > q{quotes: '“' '”';}
+    .en > q{quotes: '"' '"';}
+    .no > q{quotes: '《' '》';}
+    q:before {
+      content: open-quote;
+    } 
+    q:after {
+      content: close-quote;
+    }
+    section{
+      width:200px;
+      height:300px;
+      border: 1px solid #f13232;
+    }
+
+    /*section*/
+    .con{
+      position: relative;
+      overflow: hidden;
+    }
+    .con:after{
+      content:attr(data-title);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      line-height: 30px;
+      color: white;
+      font-size: 14px;
+      text-align: center;
+      background-color: rgba(0,0,0,0.5);
+      transform: translateY(100%);
+      transition: transform 0.5s;
+    }
+    .con:hover:after{
+      /*content: attr(data-title);*/
+      transform: translateY(0);
+    }
+
+    /*计时器*/
+    .count{
+      counter-reset: ht 3 hcx 4;
+      counter-increment: ht;
+      text-align: center;
+      font-size: 32px;
+      color: #f13232;
+    }
+    .count:before{
+      content:counter(ht);
+    }
+    .count:after{
+      content:counter(hcx);
+    }
+  </style>
+</head>
+<body>
+  <p class="ch">A说：<q>你好！</q></p>
+  <p class="en"><q>hsss</q></p>
+  <p class="no"><q>1232321</q></p>
+  <section class="con" data-title="这里可以放很多内容">这里有很多内容可以运用，一个小盒子</section>
+  <!-- 计时器 -->
+  <h5>content计数器</h5>
+  <section>
+    <p>很多内容</p>
+    <p class="count"></p>
+    <p class="count"></p>
+    <p class="count"></p>
+  </section>
+  <script>
+    var url = window.location.href
+    var url = www.baidu.com?testids=1223,12312&nonce=1232sdfsdfsadf&stuid=123213
+    var num = url.indexOf('&nonce=')
+    var str1= url.slice(num+1)
+    var num2 = str1.indexof('&')
+    
+  </script>
+</body>
+</html>

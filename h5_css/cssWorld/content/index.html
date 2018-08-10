@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>移动端和pc端</title>
+  <style>
+    html, body, section, h3,div{
+      margin:0;
+      padding:0;
+    }
+    .demo{
+      margin:0 auto;
+      border: 1px solid #999;
+    }
+    
+    @media screen and (max-width: 1024px){
+      .demo{
+        width:300px;
+        height:300px;
+        font-size: 20px;
+      }
+    }
+    @media screen and (max-device-width: 1024px){
+      .demo{
+        width:300px;
+        height:300px;
+        font-size: 60px;
+      }
+    }
+    @media(-webkit-min-device-pixel-ratio: 2),(min-device-device-pixel-ratio: 2){
+      .demo{
+        width: 300px;
+        height:300px;
+        -webkit-transform: scale(1.5);
+        transform:scale(1.5);
+        transform-origin: bottom 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h3>元素颜色变化</h3>
+    <div class="demo">nihao</div>
+  </section>
+</body>
+</html>
