@@ -1,0 +1,15 @@
+{
+  "name": "demo2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "huangtao_2121@126.com",
+  "license": "ISC",
+  "dependencies": {
+    "mime": "^2.3.1"
+  }
+}
