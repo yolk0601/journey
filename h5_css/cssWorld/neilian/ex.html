@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ex是一种尺寸单位</title>
+  <style>
+  .icon-arrow {
+  display: inline-block;
+  width: 20px;
+  height: 1ex;
+  background: url(http://demo.cssworld.cn/images/5/arrow.svg) no-repeat center;
+  }
+  section{
+    border: 1px solid #333;
+  }
+  .box{
+    width: 500px;
+    height:500px;
+s  }
+  .fontSizeW > div{
+    line-height:30px;
+    /*font-size: 24px;*/
+    background-color: #999;
+  }
+  .fontSizeW span {
+    font-size: 24px;
+    vertical-align: top;
+  }
+  /*div{
+    width: 300px;height: 300px;
+    background-color: #f13232;
+    border: 1px solid #999;
+  }
+  div > img{
+    width: 100%;height:100%;
+  }*/
+  .iconimgw{
+    line-height: 20px;
+  }
+  .icon{
+    display: inline-block; 
+    width:20px; height:20px; 
+    white-space: nowrap; 
+    letter-spacing: -1em; 
+    text-indent: -999em;
+    background: url(http://demo.cssworld.cn/images/5/delete@2x.png) no-repeat center;
+    
+  }
+  .icon:before {
+    content:'\3000';
+  }
+  /*水平垂直居中，弹窗大小未知*/
+  .container{
+    position: fixed;
+    top:0; left:0; right:0;bottom:0;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    font-size: 0;
+    white-space: nowrap;
+    overflow: auto;
+  }
+  .container:after{
+    content: '';
+    display: inline-block;
+    height:100%;
+    vertical-align: middle;
+  }
+  .dialog {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    font-size:14px;
+    white-space: nowrap;
+    background-color: #fff;
+  }
+  </style>
+</head>
+<body>
+  <h4>ex</h4>
+  <div>huangtao<i class="icon-arrow"></i></div>
+  <div>黄涛<i class="icon-arrow"></i></div>
+
+  <section class="box fontSizeW">
+    <h4>设置字体大小，设置line-height超出原设定line-height</h4>
+    <div>x
+      <span>x这里设定字体大小</span>
+    </div>
+  </section>
+
+  <section class="box">
+    <h4>图片在块级元素中，高度问题</h4>
+    <div>
+      <img src="https://static.dingtalk.com/media/lADPACOG83HoTPbNAu7NAuw_748_750.jpg" alt="">
+    </div>
+  </section>
+
+  <section class="box iconimgw">
+    <h4>实现icon小图标和文字对齐</h4>
+    <p class=iconimg>
+      <span class="icon icon-delete"></span>删除 
+    </p>
+  </section>
+  <section>
+    <h4>弹框盒子</h4>
+    <div class="container">
+      <div class="dialog">这是弹框</div>
+    </div>
+  </section>
+</body>
+</html>

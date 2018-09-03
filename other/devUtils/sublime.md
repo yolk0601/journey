@@ -54,3 +54,7 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 + JsFormat
 + 
 
+
+#### 快捷键使用
+###### jsFormat 
+option + control + F  ==>  将压缩的js 格式化

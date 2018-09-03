@@ -1,6 +1,13 @@
 ## git
 1. https://www.cnblogs.com/mengdd/p/3585038.html
 
+#### 强制覆盖
+git fetch --all
+
+git reset --hard origin/master
+
+git pull //可以省略
+
 ### 设置
 ##### 1. Git 命令操作时，总需要输入用户名和密码的解决方案
 ```
