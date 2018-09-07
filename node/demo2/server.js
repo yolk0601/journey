@@ -55,3 +55,7 @@ server.listen(3000, function () {
     console.log('localhost:3000');
 })
 
+// 制定一个模块
+var chatServer  = require('./lib/chat_server.js')
+chatServer.listen(server);
+
