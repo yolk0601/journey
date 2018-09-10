@@ -58,3 +58,7 @@ svn commit -m 'update by huangtao 理科辅导老师私信后，回滚代码到�
      ？ filenama1.text 
      ?  filename2.text ...
     ```
+
+#### 下载库
+
+svn checkout http://10.10.7.137:18080/svn/static/x5home_2.0 --username=huangtao --password=WUsYWeOEFpzXAiYS
